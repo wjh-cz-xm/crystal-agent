@@ -1,0 +1,105 @@
+[
+  {
+    "id": "bragg_law",
+    "title_zh": "布拉格定律",
+    "title_en": "Bragg's Law",
+    "category": "diffraction",
+    "tags": [
+      "Bragg定律",
+      "X射线衍射",
+      "干涉",
+      "Bragg角",
+      "晶面间距"
+    ],
+    "difficulty": "入门",
+    "source": "Wikipedia + IUCr Teaching Pamphlets",
+    "content": "## 历史\n\n1912-1913 年，**William Lawrence Bragg** 与其父 William Henry Bragg 提出该定律，并于 1915 年获诺贝尔物理学奖。Bragg 定律是 X 射线晶体学的基石。\n\n## 公式\n\n$$n\\lambda = 2d\\sin\\theta$$\n\n其中：\n- $n$：衍射级数（正整数，1, 2, 3, …）\n- $\\lambda$：入射 X 射线波长\n- $d$：晶面间距（interplanar spacing）\n- $\\theta$：Bragg 角（入射束与晶面的夹角）\n\n## 物理图像\n\n将晶体看作一组间距为 $d$ 的平行原子面。X 射线在这些面上发生\"反射\"（散射）。\n相邻面反射的光程差为 $2d\\sin\\theta$。当该程差等于波长的整数倍时，反射波同相叠加——即发生**相长干涉**（constructive interference）。\n\n## 推导（几何）\n\n1. 相邻两束反射线的光程差 = $FG + GH = d\\sin\\theta + d\\sin\\theta = 2d\\sin\\theta$\n2. 相长干涉条件：$2d\\sin\\theta = n\\lambda$\n3. 仅在特定角度 $\\theta$ 下满足此条件时出现衍射峰\n\n## 重要推论\n\n- 对于已知 $\\lambda$，测量 $\\theta$ 可得 $d$ → 确定晶胞参数\n- $\\sin\\theta \\leq 1$ → 衍射级数有限，$n\\lambda/(2d) \\leq 1$\n- 衍射峰位置仅取决于晶格几何（$d$），不依赖于原子种类\n- Bragg 定律是必要条件而非充分条件——结构因子 $F_{hkl}$ 也必须非零\n\n## 与倒易空间的关系\n\nBragg 条件 $2d\\sin\\theta = \\lambda$ 等价于散射矢量等于倒易点阵矢量：$\\mathbf{Q} = \\mathbf{k}_{散射} - \\mathbf{k}_{入射} = \\mathbf{H}_{hkl}$。这就是 Ewald 球的几何基础。",
+    "formulas": [
+      "$n\\lambda = 2d\\sin\\theta$",
+      "$d_{hkl} = \\frac{a}{\\sqrt{h^2 + k^2 + l^2}}$"
+    ],
+    "related": [
+      "reciprocal_lattice",
+      "ewald_sphere",
+      "structure_factor",
+      "miller_indices"
+    ]
+  },
+  {
+    "id": "reciprocal_lattice",
+    "title_zh": "倒易点阵",
+    "title_en": "Reciprocal Lattice",
+    "category": "diffraction",
+    "tags": [
+      "倒易点阵",
+      "倒空间",
+      "Fourier变换",
+      "布里渊区",
+      "衍射"
+    ],
+    "difficulty": "高级",
+    "source": "Wikipedia + IUCr International Tables",
+    "content": "## 定义\n\n**倒易点阵**（Reciprocal Lattice）是实空间晶体点阵的 Fourier 变换。它在理解衍射物理中扮演核心角色——衍射图样本质上是倒易点阵的映射。\n\n## 数学定义\n\n给定实空间基矢 $\\mathbf{a}, \\mathbf{b}, \\mathbf{c}$，倒易基矢定义为：\n\n$$\\mathbf{a}^* = \\frac{\\mathbf{b} \\times \\mathbf{c}}{\\mathbf{a} \\cdot (\\mathbf{b} \\times \\mathbf{c})}$$\n$$\\mathbf{b}^* = \\frac{\\mathbf{c} \\times \\mathbf{a}}{\\mathbf{b} \\cdot (\\mathbf{c} \\times \\mathbf{a})}$$\n$$\\mathbf{c}^* = \\frac{\\mathbf{a} \\times \\mathbf{b}}{\\mathbf{c} \\cdot (\\mathbf{a} \\times \\mathbf{b})}$$\n\n满足正交关系：$\\mathbf{a}_i \\cdot \\mathbf{a}_j^* = \\delta_{ij}$（Kronecker delta）\n\n## 性质\n\n1. 倒易点阵的每个点 $(hkl)$ 对应于实空间的一族晶面 $(hkl)$\n2. 倒易矢量 $\\mathbf{H}_{hkl} = h\\mathbf{a}^* + k\\mathbf{b}^* + l\\mathbf{c}^*$ 垂直于晶面 $(hkl)$\n3. 倒易矢量的长度 = 晶面间距的倒数：$|\\mathbf{H}_{hkl}| = 1/d_{hkl}$\n4. 倒易空间中的 Wigner-Seitz 原胞 = 第一 Brillouin 区\n\n## 为什么叫\"倒易\"？\n\n- 实空间大 → 倒空间小（$d$ 大 → $|\\mathbf{H}|$ 小）\n- 实空间小 → 倒空间大（$d$ 小 → $|\\mathbf{H}|$ 大）\n- 简单立方 → 倒易点阵也是简单立方\n- fcc → 倒易点阵是 bcc\n- bcc → 倒易点阵是 fcc\n\n## 与衍射的关系\n\n衍射条件（Laue 条件）：散射矢量等于倒易点阵矢量\n$$\\mathbf{k}' - \\mathbf{k} = \\mathbf{H}_{hkl}$$\n这意味着衍射斑点直接对应于倒易点阵的各个阵点。",
+    "formulas": [
+      "$\\mathbf{a}^* = \\frac{\\mathbf{b} \\times \\mathbf{c}}{\\mathbf{a} \\cdot (\\mathbf{b} \\times \\mathbf{c})}$",
+      "$|\\mathbf{H}_{hkl}| = 1/d_{hkl}$",
+      "$\\mathbf{k}' - \\mathbf{k} = \\mathbf{H}_{hkl}$"
+    ],
+    "related": [
+      "bragg_law",
+      "ewald_sphere",
+      "structure_factor",
+      "brillouin_zone"
+    ]
+  },
+  {
+    "id": "ewald_sphere",
+    "title_zh": "Ewald球构造",
+    "title_en": "Ewald Sphere Construction",
+    "category": "diffraction",
+    "tags": [
+      "Ewald球",
+      "衍射几何",
+      "倒易空间",
+      "Ewald",
+      "衍射条件"
+    ],
+    "difficulty": "高级",
+    "source": "IUCr International Tables + Wikipedia",
+    "content": "## 定义\n\n**Ewald 球**（Ewald Sphere / Ewald Construction），由 Paul Peter Ewald 于 1921 年提出，是 Bragg 定律在倒易空间中的几何表述。\n\n## 构造步骤\n\n1. 画出入射波矢量 $\\mathbf{k}_0$，其长度为 $|\\mathbf{k}_0| = 1/\\lambda$，指向样品\n2. 以 $\\mathbf{k}_0$ 的起点为球心，$1/\\lambda$ 为半径画球——这就是 Ewald 球\n3. 将倒易点阵原点放在 $\\mathbf{k}_0$ 的终点（即倒易空间原点在球面上）\n4. **当某个倒易阵点恰好落在球面上时，衍射发生**\n\n## 物理含义\n\n散射矢量 $\\mathbf{Q} = \\mathbf{k}' - \\mathbf{k}_0$ 恰好等于该倒易阵点对应的倒易矢量 $\\mathbf{H}_{hkl}$。\n此时 Bragg 条件满足：\n$$|\\mathbf{Q}| = 2\\sin\\theta/\\lambda = 1/d_{hkl}$$\n\n## 实验应用\n\n- **单晶衍射**：旋转晶体 = 旋转倒易点阵，使不同倒易阵点依次切割 Ewald 球面\n- **粉末衍射**：大量随机取向的晶粒 → 倒易阵点在球面上\"涂\"成环 → Debye-Scherrer 环\n- **TEM 电子衍射**：电子波长极短（0.025 Å @ 200 kV），Ewald 球半径极大，近似为一个平面 → 可同时看到大量衍射斑点\n\n## 直观理解\n\nEwald 球统一了实空间散射几何与倒空间点阵结构，是理解单晶衍射实验数据采集策略（如 $\\omega$ 扫描、$\\phi$ 扫描）的关键工具。",
+    "formulas": [
+      "$|\\mathbf{Q}| = 2\\sin\\theta/\\lambda = 1/d_{hkl}$",
+      "$\\mathbf{Q} = \\mathbf{k}' - \\mathbf{k}_0 = \\mathbf{H}_{hkl}$"
+    ],
+    "related": [
+      "bragg_law",
+      "reciprocal_lattice",
+      "structure_factor"
+    ]
+  },
+  {
+    "id": "structure_factor",
+    "title_zh": "结构因子",
+    "title_en": "Structure Factor",
+    "category": "diffraction",
+    "tags": [
+      "结构因子",
+      "Fhkl",
+      "散射因子",
+      "消光",
+      "衍射强度"
+    ],
+    "difficulty": "高级",
+    "source": "IUCr International Tables + Wikipedia",
+    "content": "## 定义\n\n**结构因子** $F_{hkl}$ 描述了晶胞内所有原子的散射对衍射峰 $(hkl)$ 的贡献。它决定了每个衍射斑点的**强度**。\n\n## 公式\n\n$$F_{hkl} = \\sum_{n} f_n \\, e^{2\\pi i (h x_n + k y_n + l z_n)}$$\n\n其中：\n- $f_n$：第 $n$ 个原子的原子散射因子（atomic scattering factor / form factor）\n- $(x_n, y_n, z_n)$：第 $n$ 个原子的分数坐标\n- 求和遍历晶胞中所有原子\n\n## 衍射强度\n\n衍射峰的强度正比于结构因子模的平方：\n$$I_{hkl} \\propto |F_{hkl}|^2 = F_{hkl} \\cdot F_{hkl}^*$$\n\n## 系统消光（Systematic Absences）\n\n某些 $(hkl)$ 的组合使得 $F_{hkl} = 0$，即使满足 Bragg 条件也没有衍射峰——称为**系统消光**。\n\n| 点阵类型 | 消光条件 |\n|----------|----------|\n| P（简单） | 无消光 |\n| I（体心） | $h+k+l$ = 奇数 消光 |\n| F（面心） | $h,k,l$ 奇偶混合 消光 |\n| C（底心） | $h+k$ = 奇数 消光 |\n\n## 物理意义\n\n- Bragg 定律告诉你**峰在哪里**（位置 = $d$ 和晶胞参数）\n- 结构因子告诉你**峰有多强**（强度 = 原子种类 + 位置）\n- 两者结合才能通过衍射数据求解晶体结构\n\n## Friedel 定律\n\n$$|F_{hkl}|^2 = |F_{\\bar{h}\\bar{k}\\bar{l}}|^2$$\n衍射图样总是中心对称的，即使晶体本身没有反演中心。这就是为什么 X 射线衍射只能区分 11 种 Laue 类。",
+    "formulas": [
+      "$F_{hkl} = \\sum_{n} f_n \\, e^{2\\pi i (h x_n + k y_n + l z_n)}$",
+      "$I_{hkl} \\propto |F_{hkl}|^2$"
+    ],
+    "related": [
+      "bragg_law",
+      "reciprocal_lattice",
+      "space_groups"
+    ]
+  }
+]

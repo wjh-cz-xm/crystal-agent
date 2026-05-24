@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晶体智能助手 — Crystal AI Assistant</title>
+
+<!-- KaTeX -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+<!-- marked.js -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- 3Dmol.js -->
+<script src="https://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div id="app">
+  <!-- 标题栏 -->
+  <header id="header">
+    <div id="header-logo">&#9670;</div>
+    <h1>晶体智能助手</h1>
+    <span>Crystal AI Assistant</span>
+  </header>
+
+  <!-- 主体 -->
+  <main id="main">
+    <!-- 左面板：3D 晶体模型展示区 -->
+    <section id="crystal-viewer">
+      <!-- 结构标签 -->
+      <div id="structure-label"></div>
+
+      <!-- 左侧工具栏 -->
+      <div id="viewer-toolbar">
+        <button id="btn-reset" title="重置视角">&#8634;</button>
+
+        <div class="toolbar-group">
+          <label>晶胞形式</label>
+          <select id="cell-type">
+            <option value="conventional">Conventional</option>
+            <option value="primitive">Primitive</option>
+          </select>
+        </div>
+
+        <div class="toolbar-group">
+          <label>超胞</label>
+          <select id="supercell-size">
+            <option value="1,1,1">1&#215;1&#215;1</option>
+            <option value="2,2,2">2&#215;2&#215;2</option>
+          </select>
+        </div>
+
+        <div class="toolbar-group">
+          <label>显隐控制</label>
+          <div class="cb-item">
+            <input type="checkbox" id="show-bonds" checked>
+            <label for="show-bonds">键连 Bonds</label>
+          </div>
+          <div class="cb-item">
+            <input type="checkbox" id="show-unitcell" checked>
+            <label for="show-unitcell">晶胞框线 Unit cell</label>
+          </div>
+          <div class="cb-item disabled">
+            <input type="checkbox" id="show-polyhedra" disabled>
+            <label for="show-polyhedra">配位多面体 Polyhedra</label>
+          </div>
+          <div class="toolbar-sub-label">原子 Atoms</div>
+          <div id="elements-list"></div>
+        </div>
+
+        <div class="toolbar-group">
+          <label>其他选项</label>
+          <div class="cb-item">
+            <input type="checkbox" id="opt-periodic" checked>
+            <label for="opt-periodic">Draw repeats on boundaries</label>
+          </div>
+          <div class="cb-item">
+            <input type="checkbox" id="opt-outside">
+            <label for="opt-outside">Draw outside atoms bonded within</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D 容器 -->
+      <div id="viewer-3d-container"></div>
+    </section>
+
+    <!-- 分隔线 -->
+    <div id="divider"></div>
+
+    <!-- 右面板：AI 聊天框 -->
+    <section id="chat-panel">
+      <div id="chat-header">
+        <button id="btn-new-chat">+ 新对话</button>
+      </div>
+
+      <div id="chat-messages">
+        <div class="system-message system-info">
+          欢迎使用晶体智能助手，WebSocket 已连接
+        </div>
+      </div>
+
+      <div id="chat-input-area">
+        <textarea id="chat-input"
+          placeholder="输入消息，Enter 发送，Shift+Enter 换行"
+          rows="1"></textarea>
+        <button id="btn-send">发送</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- 状态栏 -->
+  <footer id="footer">
+    <span id="connection-status" class="connected">● 已连接</span>
+    <span class="footer-sep">|</span>
+    <span id="llm-status"></span>
+  </footer>
+</div>
+
+<script src="/js/crystal-viewer.js"></script>
+<script src="/js/chat.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>

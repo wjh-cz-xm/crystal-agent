@@ -1,0 +1,23 @@
+# 密钥
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ngrok
+ngrok.exe
+ngrok.zip
+
+# 虚拟环境
+venv/
+.venv/

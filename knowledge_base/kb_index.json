@@ -1,0 +1,470 @@
+{
+  "crystal_lattice": {
+    "title_zh": "晶体点阵（晶格）",
+    "title_en": "Crystal Lattice",
+    "category": "crystal_basics",
+    "tags": [
+      "点阵",
+      "晶格",
+      "基矢",
+      "平移对称性",
+      "原胞"
+    ],
+    "difficulty": "入门",
+    "file": "categories/crystal_basics.json"
+  },
+  "unit_cell": {
+    "title_zh": "晶胞",
+    "title_en": "Unit Cell",
+    "category": "crystal_basics",
+    "tags": [
+      "晶胞",
+      "原胞",
+      "惯用胞",
+      "晶胞参数",
+      "Wigner-Seitz"
+    ],
+    "difficulty": "入门",
+    "file": "categories/crystal_basics.json"
+  },
+  "crystal_systems": {
+    "title_zh": "七大晶系",
+    "title_en": "Seven Crystal Systems",
+    "category": "crystal_basics",
+    "tags": [
+      "晶系",
+      "晶胞参数",
+      "对称性",
+      "Bravais点阵"
+    ],
+    "difficulty": "入门",
+    "file": "categories/crystal_basics.json"
+  },
+  "bravais_lattices": {
+    "title_zh": "14种Bravais点阵",
+    "title_en": "14 Bravais Lattices",
+    "category": "crystal_basics",
+    "tags": [
+      "Bravais点阵",
+      "点阵类型",
+      "P",
+      "I",
+      "F",
+      "C",
+      "Auguste Bravais"
+    ],
+    "difficulty": "入门",
+    "file": "categories/crystal_basics.json"
+  },
+  "miller_indices": {
+    "title_zh": "Miller指数（晶面指数）",
+    "title_en": "Miller Indices",
+    "category": "crystal_basics",
+    "tags": [
+      "Miller指数",
+      "晶面",
+      "晶向",
+      "hkl",
+      "William Miller"
+    ],
+    "difficulty": "入门",
+    "file": "categories/crystal_basics.json"
+  },
+  "close_packing": {
+    "title_zh": "密堆积结构",
+    "title_en": "Close-Packed Structures",
+    "category": "crystal_basics",
+    "tags": [
+      "密堆积",
+      "hcp",
+      "fcc",
+      "ccp",
+      "堆积率",
+      "配位数",
+      "四面体空隙",
+      "八面体空隙"
+    ],
+    "difficulty": "入门",
+    "file": "categories/crystal_basics.json"
+  },
+  "interstitial_sites": {
+    "title_zh": "间隙位置",
+    "title_en": "Interstitial Sites",
+    "category": "crystal_basics",
+    "tags": [
+      "间隙",
+      "八面体空隙",
+      "四面体空隙",
+      "填隙原子",
+      "fcc",
+      "hcp",
+      "bcc"
+    ],
+    "difficulty": "中级",
+    "file": "categories/crystal_basics.json"
+  },
+  "symmetry_operations": {
+    "title_zh": "对称操作",
+    "title_en": "Symmetry Operations",
+    "category": "symmetry",
+    "tags": [
+      "对称操作",
+      "旋转",
+      "反映",
+      "反演",
+      "螺旋轴",
+      "滑移面",
+      "Seitz符号"
+    ],
+    "difficulty": "入门",
+    "file": "categories/symmetry.json"
+  },
+  "point_groups": {
+    "title_zh": "点群",
+    "title_en": "Point Groups (Crystal Classes)",
+    "category": "symmetry",
+    "tags": [
+      "点群",
+      "32种点群",
+      "Laue类",
+      "晶体学限制"
+    ],
+    "difficulty": "中级",
+    "file": "categories/symmetry.json"
+  },
+  "space_groups": {
+    "title_zh": "空间群",
+    "title_en": "Space Groups",
+    "category": "symmetry",
+    "tags": [
+      "空间群",
+      "230种空间群",
+      "Hermann-Mauguin符号",
+      "Fm-3m",
+      "Pm-3m",
+      "P63/mmc"
+    ],
+    "difficulty": "高级",
+    "file": "categories/symmetry.json"
+  },
+  "rock_salt_structure": {
+    "title_zh": "岩盐型结构（NaCl型）",
+    "title_en": "Rock Salt Structure (NaCl type)",
+    "category": "crystal_structures",
+    "tags": [
+      "NaCl",
+      "岩盐",
+      "B1",
+      "Strukturbericht",
+      "离子晶体",
+      "八面体配位"
+    ],
+    "difficulty": "入门",
+    "file": "categories/crystal_structures.json"
+  },
+  "cscl_structure": {
+    "title_zh": "氯化铯型结构（CsCl型）",
+    "title_en": "Cesium Chloride Structure (CsCl type)",
+    "category": "crystal_structures",
+    "tags": [
+      "CsCl",
+      "B2",
+      "简单立方",
+      "8配位",
+      "离子晶体"
+    ],
+    "difficulty": "入门",
+    "file": "categories/crystal_structures.json"
+  },
+  "zinc_blende_structure": {
+    "title_zh": "闪锌矿型结构（ZnS型）",
+    "title_en": "Zinc Blende (Sphalerite) Structure",
+    "category": "crystal_structures",
+    "tags": [
+      "ZnS",
+      "闪锌矿",
+      "B3",
+      "四面体配位",
+      "半导体",
+      "GaAs"
+    ],
+    "difficulty": "中级",
+    "file": "categories/crystal_structures.json"
+  },
+  "diamond_structure": {
+    "title_zh": "金刚石型结构",
+    "title_en": "Diamond Cubic Structure",
+    "category": "crystal_structures",
+    "tags": [
+      "金刚石",
+      "A4",
+      "sp3杂化",
+      "四面体配位",
+      "Si",
+      "Ge"
+    ],
+    "difficulty": "入门",
+    "file": "categories/crystal_structures.json"
+  },
+  "perovskite_structure": {
+    "title_zh": "钙钛矿型结构",
+    "title_en": "Perovskite Structure",
+    "category": "crystal_structures",
+    "tags": [
+      "钙钛矿",
+      "ABX3",
+      "CaTiO3",
+      "八面体",
+      "铁电体",
+      "太阳能电池"
+    ],
+    "difficulty": "中级",
+    "file": "categories/crystal_structures.json"
+  },
+  "wurtzite_structure": {
+    "title_zh": "纤锌矿型结构",
+    "title_en": "Wurtzite Structure",
+    "category": "crystal_structures",
+    "tags": [
+      "ZnS",
+      "纤锌矿",
+      "B4",
+      "hcp",
+      "GaN",
+      "ZnO",
+      "六方"
+    ],
+    "difficulty": "中级",
+    "file": "categories/crystal_structures.json"
+  },
+  "bragg_law": {
+    "title_zh": "布拉格定律",
+    "title_en": "Bragg's Law",
+    "category": "diffraction",
+    "tags": [
+      "Bragg定律",
+      "X射线衍射",
+      "干涉",
+      "Bragg角",
+      "晶面间距"
+    ],
+    "difficulty": "入门",
+    "file": "categories/diffraction.json"
+  },
+  "reciprocal_lattice": {
+    "title_zh": "倒易点阵",
+    "title_en": "Reciprocal Lattice",
+    "category": "diffraction",
+    "tags": [
+      "倒易点阵",
+      "倒空间",
+      "Fourier变换",
+      "布里渊区",
+      "衍射"
+    ],
+    "difficulty": "高级",
+    "file": "categories/diffraction.json"
+  },
+  "ewald_sphere": {
+    "title_zh": "Ewald球构造",
+    "title_en": "Ewald Sphere Construction",
+    "category": "diffraction",
+    "tags": [
+      "Ewald球",
+      "衍射几何",
+      "倒易空间",
+      "Ewald",
+      "衍射条件"
+    ],
+    "difficulty": "高级",
+    "file": "categories/diffraction.json"
+  },
+  "structure_factor": {
+    "title_zh": "结构因子",
+    "title_en": "Structure Factor",
+    "category": "diffraction",
+    "tags": [
+      "结构因子",
+      "Fhkl",
+      "散射因子",
+      "消光",
+      "衍射强度"
+    ],
+    "difficulty": "高级",
+    "file": "categories/diffraction.json"
+  },
+  "point_defects": {
+    "title_zh": "点缺陷概述",
+    "title_en": "Point Defects Overview",
+    "category": "defects",
+    "tags": [
+      "点缺陷",
+      "空位",
+      "间隙原子",
+      "置换杂质",
+      "间隙杂质"
+    ],
+    "difficulty": "入门",
+    "file": "categories/defects.json"
+  },
+  "schottky_defect": {
+    "title_zh": "Schottky缺陷",
+    "title_en": "Schottky Defect",
+    "category": "defects",
+    "tags": [
+      "Schottky",
+      "空位对",
+      "离子晶体",
+      "NaCl",
+      "电荷中性"
+    ],
+    "difficulty": "中级",
+    "file": "categories/defects.json"
+  },
+  "frenkel_defect": {
+    "title_zh": "Frenkel缺陷",
+    "title_en": "Frenkel Defect",
+    "category": "defects",
+    "tags": [
+      "Frenkel",
+      "空位-间隙对",
+      "AgCl",
+      "离子晶体"
+    ],
+    "difficulty": "中级",
+    "file": "categories/defects.json"
+  },
+  "dislocations": {
+    "title_zh": "位错（线缺陷）",
+    "title_en": "Dislocations (Line Defects)",
+    "category": "defects",
+    "tags": [
+      "位错",
+      "刃位错",
+      "螺位错",
+      "Burgers矢量",
+      "滑移",
+      "塑性变形"
+    ],
+    "difficulty": "中级",
+    "file": "categories/defects.json"
+  },
+  "brillouin_zone": {
+    "title_zh": "Brillouin区",
+    "title_en": "Brillouin Zone",
+    "category": "electronic_properties",
+    "tags": [
+      "Brillouin区",
+      "倒空间",
+      "Wigner-Seitz",
+      "能带",
+      "Bloch波"
+    ],
+    "difficulty": "高级",
+    "file": "categories/electronic_properties.json"
+  },
+  "band_theory": {
+    "title_zh": "能带理论",
+    "title_en": "Band Theory of Solids",
+    "category": "electronic_properties",
+    "tags": [
+      "能带",
+      "价带",
+      "导带",
+      "带隙",
+      "金属",
+      "半导体",
+      "绝缘体"
+    ],
+    "difficulty": "中级",
+    "file": "categories/electronic_properties.json"
+  },
+  "bloch_theorem": {
+    "title_zh": "Bloch定理",
+    "title_en": "Bloch's Theorem",
+    "category": "electronic_properties",
+    "tags": [
+      "Bloch定理",
+      "Bloch波",
+      "周期势",
+      "晶体电子",
+      "Floquet理论"
+    ],
+    "difficulty": "高级",
+    "file": "categories/electronic_properties.json"
+  },
+  "material_silicon": {
+    "title_zh": "硅 (Si)",
+    "title_en": "Silicon",
+    "category": "material_data",
+    "tags": [
+      "Si",
+      "硅",
+      "半导体",
+      "金刚石结构",
+      "Fd-3m",
+      "间接带隙"
+    ],
+    "difficulty": "入门",
+    "file": "categories/material_data.json"
+  },
+  "material_gaas": {
+    "title_zh": "砷化镓 (GaAs)",
+    "title_en": "Gallium Arsenide",
+    "category": "material_data",
+    "tags": [
+      "GaAs",
+      "砷化镓",
+      "闪锌矿",
+      "III-V族",
+      "直接带隙",
+      "光电子"
+    ],
+    "difficulty": "中级",
+    "file": "categories/material_data.json"
+  },
+  "material_nacl": {
+    "title_zh": "氯化钠 (NaCl)",
+    "title_en": "Sodium Chloride",
+    "category": "material_data",
+    "tags": [
+      "NaCl",
+      "氯化钠",
+      "岩盐",
+      "B1",
+      "离子晶体",
+      "Fm-3m"
+    ],
+    "difficulty": "入门",
+    "file": "categories/material_data.json"
+  },
+  "material_diamond": {
+    "title_zh": "金刚石 (C)",
+    "title_en": "Diamond (Carbon)",
+    "category": "material_data",
+    "tags": [
+      "C",
+      "金刚石",
+      "A4",
+      "超硬材料",
+      "宽禁带",
+      "sp3"
+    ],
+    "difficulty": "入门",
+    "file": "categories/material_data.json"
+  },
+  "material_perovskite": {
+    "title_zh": "钛酸钙 (CaTiO₃)",
+    "title_en": "Calcium Titanate",
+    "category": "material_data",
+    "tags": [
+      "CaTiO3",
+      "钛酸钙",
+      "钙钛矿",
+      "Pbnm",
+      "正交"
+    ],
+    "difficulty": "中级",
+    "file": "categories/material_data.json"
+  }
+}

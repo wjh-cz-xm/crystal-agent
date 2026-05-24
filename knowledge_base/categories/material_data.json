@@ -1,0 +1,111 @@
+[
+  {
+    "id": "material_silicon",
+    "title_zh": "硅 (Si)",
+    "title_en": "Silicon",
+    "category": "material_data",
+    "tags": [
+      "Si",
+      "硅",
+      "半导体",
+      "金刚石结构",
+      "Fd-3m",
+      "间接带隙"
+    ],
+    "difficulty": "入门",
+    "source": "Materials Project + Wikipedia",
+    "content": "| 属性 | 数值 |\n|------|------|\n| **化学式** | Si |\n| **晶系** | 立方 |\n| **空间群** | $Fd\\bar{3}m$（No. 227） |\n| **结构类型** | 金刚石型 |\n| **晶格常数** | $a = 5.431 \\mathring{A}$ |\n| **密度** | 2.33 g/cm³ |\n| **带隙** | 1.12 eV（间接） |\n| **配位数** | 4（$sp^3$ 四面体） |\n| **熔点** | 1414 °C |\n| **应用** | 集成电路、太阳能电池、MEMS |\n\n硅是地球上最丰富的半导体元素，构成了现代微电子工业的基础。其间接带隙性质使得它不适合做高效发光器件，但非常适合做晶体管和光伏器件。",
+    "formulas": [],
+    "related": [
+      "diamond_structure",
+      "band_theory"
+    ]
+  },
+  {
+    "id": "material_gaas",
+    "title_zh": "砷化镓 (GaAs)",
+    "title_en": "Gallium Arsenide",
+    "category": "material_data",
+    "tags": [
+      "GaAs",
+      "砷化镓",
+      "闪锌矿",
+      "III-V族",
+      "直接带隙",
+      "光电子"
+    ],
+    "difficulty": "中级",
+    "source": "Materials Project + Wikipedia",
+    "content": "| 属性 | 数值 |\n|------|------|\n| **化学式** | GaAs |\n| **晶系** | 立方 |\n| **空间群** | $F\\bar{4}3m$（No. 216） |\n| **结构类型** | 闪锌矿型 |\n| **晶格常数** | $a = 5.653 \\mathring{A}$ |\n| **密度** | 5.32 g/cm³ |\n| **带隙** | 1.43 eV（**直接**） |\n| **电子迁移率** | 8500 cm²/(V·s)（远高于 Si 的 1350） |\n| **熔点** | 1238 °C |\n| **应用** | LED、激光器、高速晶体管、光伏 |\n\nGaAs 是继 Si 之后最重要的半导体。其直接带隙和高的电子迁移率使其在光电子和射频领域不可替代。与 Si 不同，GaAs 晶体缺乏反演中心，因此具有压电性。",
+    "formulas": [],
+    "related": [
+      "zinc_blende_structure",
+      "band_theory"
+    ]
+  },
+  {
+    "id": "material_nacl",
+    "title_zh": "氯化钠 (NaCl)",
+    "title_en": "Sodium Chloride",
+    "category": "material_data",
+    "tags": [
+      "NaCl",
+      "氯化钠",
+      "岩盐",
+      "B1",
+      "离子晶体",
+      "Fm-3m"
+    ],
+    "difficulty": "入门",
+    "source": "Materials Project + Wikipedia",
+    "content": "| 属性 | 数值 |\n|------|------|\n| **化学式** | NaCl |\n| **晶系** | 立方 |\n| **空间群** | $Fm\\bar{3}m$（No. 225） |\n| **结构类型** | 岩盐型（B1） |\n| **晶格常数** | $a = 5.64 \\mathring{A}$ |\n| **密度** | 2.17 g/cm³ |\n| **配位数** | 6:6（八面体） |\n| **熔点** | 801 °C |\n| **带隙** | $\\sim 8.5$ eV（绝缘体） |\n| **解理面** | $\\{100\\}$ |\n\nNaCl 是离子晶体中最重要的结构原型。其 $Fm\\bar{3}m$ 空间群是所有 B1 型结构（碱金属卤化物、碱土金属氧化物）的共同特征。NaCl 沿 $\\{100\\}$ 面容易解理，因为该面的表面能最低。",
+    "formulas": [],
+    "related": [
+      "rock_salt_structure",
+      "schottky_defect"
+    ]
+  },
+  {
+    "id": "material_diamond",
+    "title_zh": "金刚石 (C)",
+    "title_en": "Diamond (Carbon)",
+    "category": "material_data",
+    "tags": [
+      "C",
+      "金刚石",
+      "A4",
+      "超硬材料",
+      "宽禁带",
+      "sp3"
+    ],
+    "difficulty": "入门",
+    "source": "Materials Project + Wikipedia",
+    "content": "| 属性 | 数值 |\n|------|------|\n| **化学式** | C（碳的同素异形体） |\n| **晶系** | 立方 |\n| **空间群** | $Fd\\bar{3}m$（No. 227） |\n| **结构类型** | 金刚石型（A4） |\n| **晶格常数** | $a = 3.567 \\mathring{A}$ |\n| **密度** | 3.52 g/cm³ |\n| **C-C 键长** | 1.544 Å |\n| **键角** | 109.5°（正四面体） |\n| **带隙** | 5.47 eV（绝缘体） |\n| **硬度** | 莫氏 10（自然界最硬） |\n| **热导率** | 2200 W/(m·K)（所有材料中最高） |\n\n金刚石是碳在高压下的热力学稳定相。其极高的硬度和热导率源于强的 $sp^3$ 共价键网络和轻的原子质量（高 Debye 频率）。金刚石也是宽禁带半导体的代表，在高压功率电子学中有应用前景。",
+    "formulas": [],
+    "related": [
+      "diamond_structure",
+      "band_theory"
+    ]
+  },
+  {
+    "id": "material_perovskite",
+    "title_zh": "钛酸钙 (CaTiO₃)",
+    "title_en": "Calcium Titanate",
+    "category": "material_data",
+    "tags": [
+      "CaTiO3",
+      "钛酸钙",
+      "钙钛矿",
+      "Pbnm",
+      "正交"
+    ],
+    "difficulty": "中级",
+    "source": "Materials Project + Wikipedia",
+    "content": "| 属性 | 数值 |\n|------|------|\n| **化学式** | CaTiO₃ |\n| **晶系** | 正交（室温） |\n| **空间群** | $Pbnm$（No. 62，室温相） |\n| **结构类型** | 钙钛矿型（畸变） |\n| **晶格常数（室温）** | $a = 5.38 \\mathring{A}$, $b = 5.44 \\mathring{A}$, $c = 7.64 \\mathring{A}$ |\n| **高温立方相** | $Pm\\bar{3}m$（No. 221），$a \\approx 3.84 \\mathring{A}$ |\n| **密度** | 4.10 g/cm³ |\n| **带隙** | $\\sim 3.5$ eV |\n| **应用** | 微波介质陶瓷、铁电材料原型结构 |\n\nCaTiO₃ 是钙钛矿家族的命名来源（矿物名：perovskite）。虽然室温下 CaTiO₃ 本身为畸变的正交相，但其理想立方结构（$Pm\\bar{3}m$）是所有钙钛矿类材料——包括 BaTiO₃（铁电体）、MAPbI₃（光伏）——的共同 aristotype。",
+    "formulas": [],
+    "related": [
+      "perovskite_structure",
+      "space_groups"
+    ]
+  }
+]

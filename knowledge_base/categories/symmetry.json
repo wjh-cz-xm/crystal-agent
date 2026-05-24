@@ -1,0 +1,72 @@
+[
+  {
+    "id": "symmetry_operations",
+    "title_zh": "对称操作",
+    "title_en": "Symmetry Operations",
+    "category": "symmetry",
+    "tags": [
+      "对称操作",
+      "旋转",
+      "反映",
+      "反演",
+      "螺旋轴",
+      "滑移面",
+      "Seitz符号"
+    ],
+    "difficulty": "入门",
+    "source": "IUCr International Tables + LibreTexts",
+    "content": "## 定义\n\n**对称操作**（Symmetry Operation）是一种变换，使晶体在变换后与原来不可区分。\n\n## 点对称操作（至少保持一点不动）\n\n| 操作 | 符号 | 描述 |\n|------|------|------|\n| 恒等 | $1$ | 什么都不做 |\n| 旋转 | $n$ | 绕轴旋转 $360^\\circ/n$；$n=1,2,3,4,6$ |\n| 反映 | $m$ | 通过镜面反映 |\n| 反演 | $\\bar{1}$ | $(x,y,z) \\to (-x,-y,-z)$，中心对称 |\n| 旋转反演 | $\\bar{n}$ | 旋转 $360^\\circ/n$ 后反演；$\\bar{2} \\equiv m$ |\n\n## 晶体学限制定理\n\n由于平移对称性的约束，晶体中只能存在 $n=1,2,3,4,6$ 次旋转轴。**五重对称轴**（如准晶中）与周期性点阵不兼容。\n\n## 含平移的对称操作\n\n| 操作 | 符号 | 描述 |\n|------|------|------|\n| 螺旋轴（Screw Axis） | $n_m$ | 旋转 $360^\\circ/n$ + 沿轴平移 $m/n$ 的晶格周期 |\n| 滑移面（Glide Plane） | $a,b,c,n,d$ | 反映 + 平移（如 $a$ 滑移 = 反映 + $\\mathbf{a}/2$ 平移）|\n\n## Seitz 符号\n\n空间群操作统一记为 $(\\mathbf{R}|\\boldsymbol{\\tau})$：\n\n$$\\mathbf{x}' = \\mathbf{R}\\mathbf{x} + \\boldsymbol{\\tau}$$\n\n其中 $\\mathbf{R}$ 为旋转/反映矩阵，$\\boldsymbol{\\tau}$ 为平移矢量。若 $\\boldsymbol{\\tau}=0$，则为点操作。",
+    "formulas": [
+      "$\\mathbf{x}' = \\mathbf{R}\\mathbf{x} + \\boldsymbol{\\tau}$"
+    ],
+    "related": [
+      "point_groups",
+      "space_groups",
+      "crystal_systems"
+    ]
+  },
+  {
+    "id": "point_groups",
+    "title_zh": "点群",
+    "title_en": "Point Groups (Crystal Classes)",
+    "category": "symmetry",
+    "tags": [
+      "点群",
+      "32种点群",
+      "Laue类",
+      "晶体学限制"
+    ],
+    "difficulty": "中级",
+    "source": "IUCr International Tables + LibreTexts",
+    "content": "## 定义\n\n**点群**（Point Group）是只包含点对称操作（无平移）的对称群。所有操作至少保持一点不动。描述了晶体的**宏观**对称性。\n\n## 32 种晶体学点群\n\n三维空间中共有 32 种晶体学点群，可由以下方式导出：\n- 7 大晶系各对应一个全对称点群（最高对称性）\n- 每个全对称点群的子群即为该晶系的其他点群\n\n### 各晶系对应的点群（部分列举）\n\n| 晶系 | 点群举例 |\n|------|----------|\n| 三斜 | $1$, $\\bar{1}$ |\n| 单斜 | $2$, $m$, $2/m$ |\n| 正交 | $222$, $mm2$, $mmm$ |\n| 四方 | $4$, $\\bar{4}$, $4/m$, $422$, $4mm$, $\\bar{4}2m$, $4/mmm$ |\n| 三方 | $3$, $\\bar{3}$, $321$, $3m$, $\\bar{3}m$ |\n| 六方 | $6$, $\\bar{6}$, $6/m$, $622$, $6mm$, $\\bar{6}2m$, $6/mmm$ |\n| 立方 | $23$, $m\\bar{3}$, $432$, $\\bar{4}3m$, $m\\bar{3}m$ |\n\n## Laue 类\n\n32 种点群中，有 11 种是**中心对称**的（含有反演中心 $\\bar{1}$），称为 Laue 类。X 射线衍射由于 Friedel 定律，衍射图样总是中心对称的，因此只能区分 11 种 Laue 类，而非全部的 32 种点群。\n\n## 点群与物理性质\n\n- 只有非中心对称的点群才可能具有压电性（piezoelectricity）\n- 只有极性点群（10 种）才可能具有铁电性（ferroelectricity）\n- 光学活性要求晶体属于 15 种手性点群之一",
+    "formulas": [],
+    "related": [
+      "space_groups",
+      "symmetry_operations",
+      "crystal_systems"
+    ]
+  },
+  {
+    "id": "space_groups",
+    "title_zh": "空间群",
+    "title_en": "Space Groups",
+    "category": "symmetry",
+    "tags": [
+      "空间群",
+      "230种空间群",
+      "Hermann-Mauguin符号",
+      "Fm-3m",
+      "Pm-3m",
+      "P63/mmc"
+    ],
+    "difficulty": "高级",
+    "source": "IUCr International Tables + Wikipedia",
+    "content": "## 定义\n\n**空间群**（Space Group）是晶体所有对称操作的完整集合，包含点操作和平移操作（螺旋轴、滑移面）。1891年，Fedorov 和 Schönflies 独立证明了三维空间中共有 **230 种空间群**。\n\n## 层级关系\n\n$$\\text{7 大晶系} \\to \\text{14 Bravais 点阵} \\to \\text{32 点群} \\to \\text{230 空间群}$$\n\n## Hermann-Mauguin 符号\n\n国际晶体学表采用的标准符号格式：`[点阵类型][对称元素1][对称元素2][对称元素3]`\n\n| 空间群 | 编号 | 典型材料 | 含义 |\n|--------|------|----------|------|\n| $P1$ | No. 1 | — | 最简单的空间群，仅恒等操作 |\n| $P\\bar{1}$ | No. 2 | — | 增加反演中心 |\n| $P2_1/c$ | No. 14 | 许多有机晶体 | $2_1$ 螺旋轴 + $c$ 滑移面 |\n| $Pm\\bar{3}m$ | No. 221 | CsCl, 钙钛矿（立方相）| 简单立方最高对称 |\n| $Fm\\bar{3}m$ | No. 225 | Cu, Al, NaCl | 面心立方最高对称 |\n| $Fd\\bar{3}m$ | No. 227 | 金刚石, Si, Ge | 面心立方 + 金刚石滑移 |\n| $Im\\bar{3}m$ | No. 229 | Fe, Cr, W (bcc) | 体心立方最高对称 |\n| $P6_3/mmc$ | No. 194 | Mg, Zn (hcp) | 六方密堆积 |\n\n## 空间群的物理意义\n\n- 空间群决定了晶体的全部宏观和微观物理性质\n- X 射线衍射的系统消光规律直接反映空间群的对称元素\n- **蛋白质晶体**只有 65 种可能的空间群（因为镜面和反演中心会破坏手性氨基酸的 L 构型）",
+    "formulas": [],
+    "related": [
+      "point_groups",
+      "symmetry_operations",
+      "bravais_lattices"
+    ]
+  }
+]

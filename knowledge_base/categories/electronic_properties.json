@@ -1,0 +1,75 @@
+[
+  {
+    "id": "brillouin_zone",
+    "title_zh": "Brillouin区",
+    "title_en": "Brillouin Zone",
+    "category": "electronic_properties",
+    "tags": [
+      "Brillouin区",
+      "倒空间",
+      "Wigner-Seitz",
+      "能带",
+      "Bloch波"
+    ],
+    "difficulty": "高级",
+    "source": "Wikipedia + IUCr",
+    "content": "## 定义\n\n**Brillouin 区**（Brillouin Zone）是倒空间中定义为倒易点阵的 Wigner-Seitz 原胞的区域。它包含了晶体中电子波函数所有物理上不等价的波矢 $\\mathbf{k}$。\n\n## 第一 Brillouin 区\n\n第一 Brillouin 区是距离倒易点阵原点（$\\Gamma$ 点）比任何其他倒易阵点更近的所有 $\\mathbf{k}$ 点的集合。其边界由 Bragg 面（垂直于倒易矢量的中垂面）构成。\n\n## 高对称点（立方晶系的常用符号）\n\n| 符号 | 位置（fcc 倒空间 = bcc 型） | 坐标（以 $2\\pi/a$ 为单位） |\n|------|---------------------------|---------------------------|\n| $\\Gamma$ | Brillouin 区中心 | $(0, 0, 0)$ |\n| $X$ | $[100]$ 方向与区边界交点 | $(1, 0, 0)$ |\n| $L$ | $[111]$ 方向与区边界交点 | $(\\frac{1}{2}, \\frac{1}{2}, \\frac{1}{2})$ |\n| $K$ | $[110]$ 方向与区边界交点 | $(\\frac{3}{4}, \\frac{3}{4}, 0)$ |\n| $W$ | $X$ 和 $K$ 之间的边界点 | $(1, \\frac{1}{2}, 0)$ |\n\n## 物理意义\n\n- Bloch 定理：晶体中的电子波函数由波矢 $\\mathbf{k}$（在第一 Brillouin 区内）和能带指数 $n$ 标记\n- 能带在 Brillouin 区边界处分裂 → 带隙\n- 自由电子抛物面 $E = \\hbar^2 k^2/(2m)$ 在 Brillouin 区边界处被 Bragg 反射 → 能隙打开\n- 半导体的价带顶和导带底在 Brillouin 区中的相对位置（$\\Gamma$ 点 vs X 点 vs L 点）决定其是直接带隙还是间接带隙半导体",
+    "formulas": [],
+    "related": [
+      "reciprocal_lattice",
+      "band_theory",
+      "bloch_theorem"
+    ]
+  },
+  {
+    "id": "band_theory",
+    "title_zh": "能带理论",
+    "title_en": "Band Theory of Solids",
+    "category": "electronic_properties",
+    "tags": [
+      "能带",
+      "价带",
+      "导带",
+      "带隙",
+      "金属",
+      "半导体",
+      "绝缘体"
+    ],
+    "difficulty": "中级",
+    "source": "Wikipedia + LibreTexts",
+    "content": "## 起源\n\n**能带理论**解释了为什么一些固体是金属、一些是半导体、一些是绝缘体。它从 Bloch 定理出发，描述电子在周期性晶格势场中的能量本征态。\n\n## 核心物理\n\n当 $N$ 个原子聚集成晶体时，每个原子能级分裂为 $N$ 个能级，形成**能带**（Energy Band）。\n允许电子占据的能带之间可能被**带隙**（Band Gap / Forbidden Gap）分隔。\n\n## 金属 vs 半导体 vs 绝缘体\n\n| 类型 | 带隙 $E_g$ | 电阻率（室温） | 示例 |\n|------|-----------|---------------|------|\n| 金属 | 无（价带部分填充） | $\\sim 10^{-8}$ Ω·m | Cu, Al, Fe |\n| 半导体 | $0 < E_g < 4$ eV | $10^{-4} \\sim 10^{7}$ Ω·m | Si (1.12 eV), GaAs (1.43 eV) |\n| 绝缘体 | $E_g > 4$ eV | $> 10^{10}$ Ω·m | 金刚石 (5.47 eV), SiO₂ |\n\n## 直接 vs 间接带隙\n\n- **直接带隙**：导带底和价带顶在同一 $\\mathbf{k}$ 点（如 GaAs 在 $\\Gamma$ 点）\n  → 电子可直接跃迁发光，适合 LED/激光器\n- **间接带隙**：导带底和价带顶在不同 $\\mathbf{k}$ 点（如 Si：价带顶在 $\\Gamma$，导带底在 $X$ 点附近）\n  → 跃迁需要声子参与，发光效率极低\n\n## 有效质量\n\n能带曲率决定载流子的有效质量：\n$$\\frac{1}{m^*} = \\frac{1}{\\hbar^2} \\frac{\\partial^2 E}{\\partial k^2}$$\n\n窄带（$d$ 轨道）→ 曲率大 → 有效质量大（\"重\"电子）；宽带（$s,p$ 轨道）→ 曲率小 → 有效质量小（\"轻\"电子）。",
+    "formulas": [
+      "$\\frac{1}{m^*} = \\frac{1}{\\hbar^2} \\frac{\\partial^2 E}{\\partial k^2}$"
+    ],
+    "related": [
+      "brillouin_zone",
+      "bloch_theorem",
+      "density_of_states"
+    ]
+  },
+  {
+    "id": "bloch_theorem",
+    "title_zh": "Bloch定理",
+    "title_en": "Bloch's Theorem",
+    "category": "electronic_properties",
+    "tags": [
+      "Bloch定理",
+      "Bloch波",
+      "周期势",
+      "晶体电子",
+      "Floquet理论"
+    ],
+    "difficulty": "高级",
+    "source": "Wikipedia + IUCr",
+    "content": "## 陈述\n\n**Bloch 定理**（1928年，Felix Bloch）是固体物理中最重要的定理之一。它指出：\n\n在周期性势场 $V(\\mathbf{r} + \\mathbf{R}) = V(\\mathbf{r})$ 中（$\\mathbf{R}$ 为任意点阵矢量），单电子 Schrödinger 方程的本征函数具有如下形式：\n\n$$\\psi_{n\\mathbf{k}}(\\mathbf{r}) = e^{i\\mathbf{k} \\cdot \\mathbf{r}} u_{n\\mathbf{k}}(\\mathbf{r})$$\n\n其中 $u_{n\\mathbf{k}}(\\mathbf{r})$ 具有晶格的周期性：$u_{n\\mathbf{k}}(\\mathbf{r} + \\mathbf{R}) = u_{n\\mathbf{k}}(\\mathbf{r})$。\n\n## 核心含义\n\nBloch 波 = 平面波 $\\times$ 周期性调幅函数：\n- 电子在晶体中并非像自由电子一样是纯平面波\n- 但也不是完全局域在某原子周围\n- 它是在自由传播的基础上被原子核的周期性所\"调制\"\n\n## 推论\n\n1. $\\mathbf{k}$ 限制在第一 Brillouin 区内（周期性边界条件）\n2. 对于每个 $\\mathbf{k}$，能量 $E_n(\\mathbf{k})$ 形成能带结构\n3. $E_n(\\mathbf{k})$ 是 $\\mathbf{k}$ 的周期函数：$E_n(\\mathbf{k} + \\mathbf{G}) = E_n(\\mathbf{k})$（$\\mathbf{G}$ 为倒易矢量）\n\n## 为什么 Bloch 定理如此重要？\n\n它将一个原本在 $\\sim 10^{23}$ 个原子尺度上不可解的量子力学问题，简化为在一个晶胞（几个原子）内求解，然后通过 $\\mathbf{k}$ 遍历 Brillouin 区得到整个晶体的所有电子态。",
+    "formulas": [
+      "$\\psi_{n\\mathbf{k}}(\\mathbf{r}) = e^{i\\mathbf{k} \\cdot \\mathbf{r}} u_{n\\mathbf{k}}(\\mathbf{r})$",
+      "$E_n(\\mathbf{k} + \\mathbf{G}) = E_n(\\mathbf{k})$"
+    ],
+    "related": [
+      "band_theory",
+      "brillouin_zone",
+      "density_of_states"
+    ]
+  }
+]

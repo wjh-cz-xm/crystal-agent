@@ -1,0 +1,93 @@
+[
+  {
+    "id": "point_defects",
+    "title_zh": "点缺陷概述",
+    "title_en": "Point Defects Overview",
+    "category": "defects",
+    "tags": [
+      "点缺陷",
+      "空位",
+      "间隙原子",
+      "置换杂质",
+      "间隙杂质"
+    ],
+    "difficulty": "入门",
+    "source": "Wikipedia + MIT OCW",
+    "content": "## 定义\n\n**点缺陷**（Point Defects）是局限在单个阵点或其附近的零维晶体缺陷。\n\n## 类型\n\n| 缺陷类型 | 描述 | 示例 |\n|----------|------|------|\n| **空位（Vacancy）** | 原子从其正常阵点缺失 | 所有晶体在有限温度下都有空位 |\n| **自间隙原子（Self-Interstitial）** | 原子从正常位置位移到间隙中 | 辐照损伤 |\n| **置换杂质（Substitutional Impurity）** | 外来原子替换宿主原子 | P 代 Si（n 型半导体）|\n| **间隙杂质（Interstitial Impurity）** | 外来原子进入间隙位置 | C 在 Fe 中（钢的强化）|\n\n## 空位的热力学\n\n平衡空位浓度随温度呈指数增长：\n$$C_v = e^{-E_f/(k_B T)}$$\n\n- 熔点附近：$C_v \\sim 10^{-4}$（每 10,000 个阵点中有 1 个空位）\n- 室温：$C_v \\sim 10^{-15}$（几乎无可动空位）\n\n这就是为什么固态扩散在高温下才显著。\n\n## 点缺陷的作用\n\n- **扩散**：空位和间隙原子是原子迁移的载体\n- **离子电导**：离子晶体中空位迁移 → 离子导电\n- **颜色**：F 中心（阴离子空位捕获电子）→ 晶体着色\n- **半导体掺杂**：置换杂质控制载流子类型和浓度",
+    "formulas": [
+      "$C_v = e^{-E_f/(k_B T)}$"
+    ],
+    "related": [
+      "schottky_defect",
+      "frenkel_defect",
+      "edge_dislocation"
+    ]
+  },
+  {
+    "id": "schottky_defect",
+    "title_zh": "Schottky缺陷",
+    "title_en": "Schottky Defect",
+    "category": "defects",
+    "tags": [
+      "Schottky",
+      "空位对",
+      "离子晶体",
+      "NaCl",
+      "电荷中性"
+    ],
+    "difficulty": "中级",
+    "source": "Wikipedia + Britannica",
+    "content": "## 定义\n\n**Schottky 缺陷**是离子晶体中为保持电荷中性而同时形成的一对**阳离子空位 + 阴离子空位**。\n\n以 NaCl 为例：一个 Na$^+$ 空位（有效电荷 $-1$）和一个 Cl$^-$ 空位（有效电荷 $+1$）同时出现，保持整体电中性。\n\n## 形成条件\n\n- 阳离子和阴离子半径相近（$r_{阳}/r_{阴} \\approx 1$）\n- 典型材料：NaCl, KCl, KBr, MgO\n- 形成能：通常 2-3 eV/缺陷对\n\n## 平衡浓度\n\n$$n_s \\propto e^{-E_s/(2k_BT)}$$\n\n其中 $E_s$ 是形成一个 Schottky 对（两个空位）的总能量，因子 2 来自两种空位的平衡。\n\n## 与 Frenkel 缺陷的比较\n\n| 特征 | Schottky | Frenkel |\n|------|----------|--------|\n| 涉及离子 | 阳离子 + 阴离子 | 仅一种离子（通常阳离子）|\n| 位置 | 两个空位（表面/晶界） | 一个空位 + 一个间隙 |\n| 体积变化 | 晶体体积膨胀 | 体积基本不变 |\n| 典型材料 | NaCl, KCl, MgO | AgCl, AgBr, CaF₂ |",
+    "formulas": [
+      "$n_s \\propto e^{-E_s/(2k_BT)}$"
+    ],
+    "related": [
+      "frenkel_defect",
+      "point_defects"
+    ]
+  },
+  {
+    "id": "frenkel_defect",
+    "title_zh": "Frenkel缺陷",
+    "title_en": "Frenkel Defect",
+    "category": "defects",
+    "tags": [
+      "Frenkel",
+      "空位-间隙对",
+      "AgCl",
+      "离子晶体"
+    ],
+    "difficulty": "中级",
+    "source": "Wikipedia + Britannica",
+    "content": "## 定义\n\n**Frenkel 缺陷**是离子晶体中一个离子（通常为较小的阳离子）离开其正常阵点进入间隙位置，同时留下一个空位的缺陷组合。\n\n## 电荷守恒\n\nFrenkel 缺陷自动保持电荷中性：阳离子空位（有效负电荷）+ 阳离子间隙（有效正电荷）= 净电荷为零。\n\n## 形成条件\n\n- 阳离子远小于阴离子（$r_{阳} \\ll r_{阴}$），容易进入间隙\n- 典型材料：\n  - AgCl, AgBr（Ag$^+$ 很小，容易进入间隙）\n  - CaF₂, SrF₂, BaF₂（萤石结构，F$^-$ 进入间隙 → 反 Frenkel）\n\n## 平衡浓度\n\n$$n_f \\propto e^{-E_f/(2k_BT)}$$\n\n## 与 Schottky 的能量竞争\n\n晶体选择 Schottky 还是 Frenkel 取决于哪种方式的形成能更低：\n- Schottky：需要同时在表面形成两个空位，体积膨胀\n- Frenkel：需要一个空位 + 一个间隙，对晶体体积影响小\n- 在 NaCl 中，Schottky 形成能（~2.3 eV）< Frenkel 形成能（~3 eV）→ Schottky 主导",
+    "formulas": [
+      "$n_f \\propto e^{-E_f/(2k_BT)}$"
+    ],
+    "related": [
+      "schottky_defect",
+      "point_defects"
+    ]
+  },
+  {
+    "id": "dislocations",
+    "title_zh": "位错（线缺陷）",
+    "title_en": "Dislocations (Line Defects)",
+    "category": "defects",
+    "tags": [
+      "位错",
+      "刃位错",
+      "螺位错",
+      "Burgers矢量",
+      "滑移",
+      "塑性变形"
+    ],
+    "difficulty": "中级",
+    "source": "Wikipedia + MIT OCW",
+    "content": "## 定义\n\n**位错**（Dislocation）是一维线缺陷，是晶体中沿某条线原子排列异常的线状区域。位错是晶体塑性变形的微观载体。\n\n## Burgers 矢量\n\n位错的特征量是 **Burgers 矢量** $\\mathbf{b}$，通过绕位错线作 Burgers 回路得到。\n$\\mathbf{b}$ 的大小和方向决定了位错的类型和强度。\n\n## 刃位错（Edge Dislocation）\n\n- $\\mathbf{b} \\perp$ 位错线\n- 形象类比：在书中夹入半页纸——纸边就是位错线\n- 有压应力区和拉应力区\n- 杂质原子偏聚到应力区 → 固溶强化\n- 符号：$\\perp$（正刃位错）、$\\top$（负刃位错）\n\n## 螺位错（Screw Dislocation）\n\n- $\\mathbf{b} \\parallel$ 位错线\n- 形象类比：将晶体沿一个面切开，然后平行于切口方向剪切位移一个 Burgers 矢量\n- 晶体表面形成螺旋台阶 → 晶体生长的优先位点\n- 解释了为什么晶体可以在远低于理论强度的过饱和度下生长\n\n## 混合位错\n\n大多数真实位错兼有刃型和螺型分量，$\\mathbf{b}$ 与位错线的夹角在 0° 到 90° 之间。\n\n## 位错密度\n\n- 充分退火的金属：$\\sim 10^6$ cm$^{-2}$\n- 严重冷加工的金属：$\\sim 10^{12}$ cm$^{-2}$\n\n## 位错与力学性能\n\n位错既可以**减弱**晶体强度（通过滑移使晶体变形），也可以**增强**晶体强度（位错间的缠结导致加工硬化）。这看似矛盾的双重角色是理解所有金属力学行为的核心。",
+    "formulas": [],
+    "related": [
+      "point_defects",
+      "grain_boundaries"
+    ]
+  }
+]

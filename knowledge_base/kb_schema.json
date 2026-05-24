@@ -1,0 +1,53 @@
+{
+  "description": "晶体学知识库 Schema 定义",
+  "version": "1.0",
+  "categories": {
+    "crystal_basics": {
+      "name_zh": "晶体几何基础",
+      "name_en": "Crystal Geometry Basics",
+      "description": "点阵、晶胞、晶系、Bravais点阵、Miller指数等基础概念"
+    },
+    "symmetry": {
+      "name_zh": "对称性理论",
+      "name_en": "Symmetry Theory",
+      "description": "对称操作、点群、空间群、对称元素"
+    },
+    "crystal_structures": {
+      "name_zh": "典型晶体结构",
+      "name_en": "Typical Crystal Structures",
+      "description": "NaCl型、CsCl型、闪锌矿型、钙钛矿型、尖晶石型等结构类型"
+    },
+    "diffraction": {
+      "name_zh": "衍射理论",
+      "name_en": "Diffraction Theory",
+      "description": "Bragg定律、倒易点阵、Laue条件、结构因子、X射线/中子/电子衍射"
+    },
+    "defects": {
+      "name_zh": "缺陷与位错",
+      "name_en": "Defects and Dislocations",
+      "description": "点缺陷、线缺陷、面缺陷、位错理论"
+    },
+    "electronic_properties": {
+      "name_zh": "电子性质",
+      "name_en": "Electronic Properties",
+      "description": "能带理论、Brillouin区、态密度、有效质量"
+    },
+    "material_data": {
+      "name_zh": "材料数据",
+      "name_en": "Material Data",
+      "description": "具体材料的晶体结构参数、晶格常数、空间群等实测/计算数据"
+    }
+  },
+  "entry_schema": {
+    "id": "string - 唯一标识符，如 bragg_law",
+    "title_zh": "string - 中文标题",
+    "title_en": "string - 英文标题",
+    "category": "string - 所属分类",
+    "tags": ["string - 搜索标签"],
+    "content": "string - 详细解释（中文，保留LaTeX公式）",
+    "formulas": ["string - 关键公式（LaTeX格式）"],
+    "related": ["string - 关联条目ID"],
+    "source": "string - 内容来源（IUCr/LibreTexts/Wikipedia/自编）",
+    "difficulty": "string - 难度等级：入门/中级/高级"
+  }
+}

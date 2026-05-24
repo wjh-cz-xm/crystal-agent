@@ -1,0 +1,145 @@
+[
+  {
+    "id": "rock_salt_structure",
+    "title_zh": "岩盐型结构（NaCl型）",
+    "title_en": "Rock Salt Structure (NaCl type)",
+    "category": "crystal_structures",
+    "tags": [
+      "NaCl",
+      "岩盐",
+      "B1",
+      "Strukturbericht",
+      "离子晶体",
+      "八面体配位"
+    ],
+    "difficulty": "入门",
+    "source": "Wikipedia + LibreTexts + Materials Project",
+    "content": "## 概述\n\n**岩盐型结构**（Rock Salt / Halite），Strukturbericht 符号 **B1**，是最常见的离子晶体结构类型之一。\n\n## 结构特征\n\n- **原型**：NaCl（氯化钠）\n- **晶系**：立方\n- **Bravais 点阵**：面心立方（fcc）\n- **空间群**：$Fm\\bar{3}m$（No. 225）\n- **每惯用胞分子数**：Z = 4\n- **配位数**：6:6（八面体）\n\n## 原子位置\n\n- Cl$^-$：$(0, 0, 0)$ —— fcc 位置\n- Na$^+$：$(\\frac{1}{2}, \\frac{1}{2}, \\frac{1}{2})$ —— 全部八面体空隙\n\n实际上就是两个 fcc 亚点阵互相穿插，沿 $[100]$ 方向错开半个晶格常数。\n\n## 晶体参数\n\n- **晶格常数**：$a = 5.64 \\mathring{A}$（0.564 nm）\n- **Pearson 符号**：cF8\n\n## 其他代表性材料\n\n绝大多数碱金属卤化物（LiF, NaF, KCl, KBr, RbI）和碱土金属氧化物（MgO, CaO, NiO, FeO）都采用此结构。\n\n## 几何关系\n\n在刚球模型中：\n$$r_{阳} + r_{阴} = a/2$$\n配位数 6 要求半径比 $r_{阳}/r_{阴} > 0.414$（八面体配位的下限）。",
+    "formulas": [
+      "$r_{阳} + r_{阴} = a/2$"
+    ],
+    "related": [
+      "cscl_structure",
+      "zinc_blende_structure",
+      "interstitial_sites",
+      "close_packing"
+    ]
+  },
+  {
+    "id": "cscl_structure",
+    "title_zh": "氯化铯型结构（CsCl型）",
+    "title_en": "Cesium Chloride Structure (CsCl type)",
+    "category": "crystal_structures",
+    "tags": [
+      "CsCl",
+      "B2",
+      "简单立方",
+      "8配位",
+      "离子晶体"
+    ],
+    "difficulty": "入门",
+    "source": "Wikipedia + LibreTexts + Materials Project",
+    "content": "## 概述\n\n**氯化铯型结构**，Strukturbericht 符号 **B2**。注意：CsCl 常被误认为是体心立方（bcc）结构，但它实际上是**简单立方（P）**点阵，基元为 Cl$^-$（0,0,0）+ Cs$^+$（½,½,½）。\n\n## 结构特征\n\n- **原型**：CsCl（氯化铯）\n- **晶系**：立方\n- **Bravais 点阵**：简单立方（P）\n- **空间群**：$Pm\\bar{3}m$（No. 221）\n- **每惯用胞分子数**：Z = 1\n- **配位数**：8:8（立方体形）\n\n## 原子位置\n\n- Cl$^-$：$(0, 0, 0)$\n- Cs$^+$：$(\\frac{1}{2}, \\frac{1}{2}, \\frac{1}{2})$\n\n两个简单立方亚点阵沿体对角线方向错开 $a\\sqrt{3}/2$。\n\n## 晶体参数\n\n- **晶格常数**：$a = 4.12 \\mathring{A}$（0.412 nm）\n- **Pearson 符号**：cP2\n\n## 为什么不是 bcc？\n\nbcc 结构要求顶点和体心的原子是**同种原子**。CsCl 中顶点是 Cl$^-$、体心是 Cs$^+$，两者的化学环境和散射因子完全不同，因此它不是 bcc，而是简单立方 + 两原子基元。\n\n## 形成条件\n\n配位数 8 要求半径比 $r_{阳}/r_{阴} > 0.732$（立方体配位的下限）。Cs$^+$ 半径（1.67 Å）较大，满足此条件。而 Na$^+$（1.02 Å）太小，无法形成 CsCl 结构。",
+    "formulas": [],
+    "related": [
+      "rock_salt_structure",
+      "bravais_lattices"
+    ]
+  },
+  {
+    "id": "zinc_blende_structure",
+    "title_zh": "闪锌矿型结构（ZnS型）",
+    "title_en": "Zinc Blende (Sphalerite) Structure",
+    "category": "crystal_structures",
+    "tags": [
+      "ZnS",
+      "闪锌矿",
+      "B3",
+      "四面体配位",
+      "半导体",
+      "GaAs"
+    ],
+    "difficulty": "中级",
+    "source": "Wikipedia + LibreTexts + Materials Project",
+    "content": "## 概述\n\n**闪锌矿型结构**（Zinc Blende / Sphalerite），Strukturbericht 符号 **B3**。是 III-V 族和 II-VI 族半导体（GaAs, InP, ZnSe, CdTe 等）的主流结构。\n\n## 结构特征\n\n- **原型**：ZnS（立方硫化锌）\n- **晶系**：立方\n- **Bravais 点阵**：面心立方（fcc）\n- **空间群**：$F\\bar{4}3m$（No. 216）\n- **每惯用胞分子数**：Z = 4\n- **配位数**：4:4（四面体）\n\n## 原子位置\n\n- Zn：$(0, 0, 0)$ —— fcc 位置\n- S：$(\\frac{1}{4}, \\frac{1}{4}, \\frac{1}{4})$ —— 半数四面体空隙\n\n两个 fcc 亚点阵沿体对角线方向错开 $a\\sqrt{3}/4$。\n\n## 与金刚石结构的关系\n\n闪锌矿和金刚石结构的原子排布完全相同，但：\n- **金刚石**（$Fd\\bar{3}m$）：两种原子是同一元素（C-C），有反演中心\n- **闪锌矿**（$F\\bar{4}3m$）：两种原子是不同元素（Zn-S），无反演中心\n\n## 晶体参数\n\n- **晶格常数**：$a = 5.41 \\mathring{A}$（ZnS）\n- GaAs：$a = 5.653 \\mathring{A}$；InP：$a = 5.869 \\mathring{A}$\n\n## 物理意义\n\n闪锌矿结构缺乏反演中心 → 具有压电性。加上其 $sp^3$ 杂化导致半导体性质，使其成为光电子器件（LED、激光器、光电探测器）的核心材料。",
+    "formulas": [],
+    "related": [
+      "diamond_structure",
+      "wurtzite_structure",
+      "rock_salt_structure"
+    ]
+  },
+  {
+    "id": "diamond_structure",
+    "title_zh": "金刚石型结构",
+    "title_en": "Diamond Cubic Structure",
+    "category": "crystal_structures",
+    "tags": [
+      "金刚石",
+      "A4",
+      "sp3杂化",
+      "四面体配位",
+      "Si",
+      "Ge"
+    ],
+    "difficulty": "入门",
+    "source": "Wikipedia + LibreTexts + Materials Project",
+    "content": "## 概述\n\n**金刚石型结构**（Diamond Cubic），Strukturbericht 符号 **A4**。该结构完美诠释了 $sp^3$ 共价键的几何要求。\n\n## 结构特征\n\n- **原型**：C（金刚石）\n- **晶系**：立方\n- **Bravais 点阵**：面心立方（fcc）\n- **空间群**：$Fd\\bar{3}m$（No. 227）\n- **每惯用胞原子数**：8（两个 fcc 亚点阵 × 4）\n- **配位数**：4（$sp^3$ 正四面体）\n\n## 原子位置\n\n- C1：$(0, 0, 0)$ —— fcc 位置\n- C2：$(\\frac{1}{4}, \\frac{1}{4}, \\frac{1}{4})$ —— 半数四面体空隙\n\n## $sp^3$ 杂化与键角\n\n每个碳原子与 4 个最近邻形成 $sp^3$ 共价键，键角 $109.5^\\circ$（正四面体角）。C-C 键长为 $a\\sqrt{3}/4 \\approx 1.544 \\mathring{A}$。\n\n## 晶体参数\n\n| 材料 | 晶格常数 $a$（Å） | 带隙（eV） |\n|------|-------------------|------------|\n| C（金刚石） | 3.567 | 5.47 |\n| Si（硅） | 5.431 | 1.12 |\n| Ge（锗） | 5.658 | 0.67 |\n| $\\alpha$-Sn（灰锡） | 6.46 | 0（半金属） |\n\n## 原子堆积率\n\n$$\\frac{\\sqrt{3}\\pi}{16} \\approx 34\\%$$\n\n远低于密堆积的 74%，因为 $sp^3$ 共价键的方向性要求开放结构。",
+    "formulas": [
+      "$\\frac{\\sqrt{3}\\pi}{16} \\approx 34\\%$"
+    ],
+    "related": [
+      "zinc_blende_structure",
+      "close_packing",
+      "interstitial_sites"
+    ]
+  },
+  {
+    "id": "perovskite_structure",
+    "title_zh": "钙钛矿型结构",
+    "title_en": "Perovskite Structure",
+    "category": "crystal_structures",
+    "tags": [
+      "钙钛矿",
+      "ABX3",
+      "CaTiO3",
+      "八面体",
+      "铁电体",
+      "太阳能电池"
+    ],
+    "difficulty": "中级",
+    "source": "Wikipedia + LibreTexts + Materials Project",
+    "content": "## 概述\n\n**钙钛矿型结构**（Perovskite）是功能材料中最重要的结构类型之一，通式为 $ABX_3$。该结构家族涵盖铁电体（BaTiO₃）、超导体（YBa₂Cu₃O₇）、离子导体和高效太阳能电池材料（MAPbI₃）。\n\n## 理想立方结构\n\n- **原型**：CaTiO₃（钛酸钙），但高温相才为理想立方\n- **晶系**：立方（高温相）\n- **Bravais 点阵**：简单立方（P）\n- **空间群**：$Pm\\bar{3}m$（No. 221）\n- **每惯用胞分子数**：Z = 1\n\n## 原子位置（理想立方）\n\n- A 位（Ca）：$(\\frac{1}{2}, \\frac{1}{2}, \\frac{1}{2})$ —— 12 配位（立方八面体空隙）\n- B 位（Ti）：$(0, 0, 0)$ —— 6 配位（八面体）\n- X 位（O）：$(\\frac{1}{2}, 0, 0), (0, \\frac{1}{2}, 0), (0, 0, \\frac{1}{2})$ —— 被 2 个 B 共享\n\n## Goldschmidt 容差因子\n\n$$t = \\frac{r_A + r_X}{\\sqrt{2}(r_B + r_X)}$$\n\n- $t \\approx 1$：理想立方钙钛矿\n- $0.9 < t < 1$：轻微畸变（四方/正交）\n- $t < 0.9$ 或 $t > 1$：其他结构类型\n\n## 畸变与相变\n\nCaTiO₃ 在室温下并非立方，而是正交畸变（空间群 $Pbnm$，No. 62），原因是 Ca²⁺ 太小导致 TiO₆ 八面体发生倾斜（octahedral tilting）。\n\n典型相变序列（降温）：立方 $Pm\\bar{3}m \\to$ 四方 $I4/mcm \\to$ 正交 $Pbnm$\n\n## 应用\n\n- BaTiO₃：铁电陶瓷（MLCC 电容器）\n- MAPbI₃（有机-无机杂化钙钛矿）：太阳能电池效率 > 25%\n- LSGM：固体氧化物燃料电池电解质",
+    "formulas": [
+      "$t = \\frac{r_A + r_X}{\\sqrt{2}(r_B + r_X)}$"
+    ],
+    "related": [
+      "rock_salt_structure",
+      "space_groups"
+    ]
+  },
+  {
+    "id": "wurtzite_structure",
+    "title_zh": "纤锌矿型结构",
+    "title_en": "Wurtzite Structure",
+    "category": "crystal_structures",
+    "tags": [
+      "ZnS",
+      "纤锌矿",
+      "B4",
+      "hcp",
+      "GaN",
+      "ZnO",
+      "六方"
+    ],
+    "difficulty": "中级",
+    "source": "Wikipedia + LibreTexts",
+    "content": "## 概述\n\n**纤锌矿型结构**（Wurtzite），Strukturbericht 符号 **B4**。是闪锌矿的六方对应物。重要的宽禁带半导体 GaN、ZnO、AlN 都采用此结构。\n\n## 结构特征\n\n- **原型**：ZnS（六方硫化锌）\n- **晶系**：六方\n- **Bravais 点阵**：六方 P\n- **空间群**：$P6_3mc$（No. 186）\n- **每惯用胞分子数**：Z = 2\n- **配位数**：4:4（四面体）\n\n## 与闪锌矿的关系\n\n纤锌矿 vs 闪锌矿 = hcp vs fcc 的对应关系：\n- 闪锌矿：基于 fcc 的 ABCABC 堆垛 → 立方对称\n- 纤锌矿：基于 hcp 的 ABAB 堆垛 → 六方对称\n- 两者的最近邻配位完全相同（四面体 4:4），区别在于次近邻\n\n## 典型材料\n\n| 材料 | $a$（Å） | $c$（Å） | 带隙（eV） |\n|------|----------|----------|------------|\n| GaN | 3.189 | 5.185 | 3.4 |\n| ZnO | 3.250 | 5.207 | 3.37 |\n| AlN | 3.112 | 4.982 | 6.2 |\n\n## 自发极化\n\n纤锌矿结构缺乏反演中心且 $c/a$ 偏离理想值 $\\sqrt{8/3} \\approx 1.633$，导致沿 $c$ 轴产生自发极化——这对 GaN 基 HEMT 器件的二维电子气（2DEG）形成至关重要。",
+    "formulas": [],
+    "related": [
+      "zinc_blende_structure",
+      "close_packing",
+      "space_groups"
+    ]
+  }
+]
