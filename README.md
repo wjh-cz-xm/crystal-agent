@@ -127,72 +127,43 @@ Crystal agent project 2.0/
 ├── .env.example
 └── README.md
 ```
-```mermaid
-graph TD
-    %% 样式定义
-    classDef client fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef server fill:#bbf,stroke:#333,stroke-width:2px;
-    classDef external fill:#fbf,stroke:#333,stroke-width:2px;
-    classDef storage fill:#dfd,stroke:#333,stroke-width:2px;
-
-    subgraph Frontend [前端浏览器 - HTML/CSS/JS]
-        UI[布局控制 app.js]
-        Chat[聊天框交互 chat.js]
-        Viewer[3D 晶体查看器 crystal-viewer.js]
-    end
-
-    subgraph Backend [后端服务 - FastAPI]
-        Main[主入口 main.py]
-        WS[连接管理 websocket_manager.py]
-        Service[晶体结构服务 crystal_service.py]
-        
-        subgraph AgentEnv [智能体内核]
-            Agent[DeepSeek Agent agent.py]
-            Registry[工具注册中心 tool_registry.py]
-        end
-    end
-
-    subgraph Storage [本地存储 & 缓存]
-        CIF[CIF 缓存目录 cif_cache/]
-        KB[本地知识库 knowledge_base/]
-    end
-
-    subgraph External [外部 APIs]
-        MP[Materials Project API]
-        Serp[SerpAPI 联网搜索]
-        DeepSeek[DeepSeek LLM API]
-    end
-
-    %% 通信与交互流程
-    Chat <-->|发送用户输入 / 接收流式文本| UI
-    Viewer <-->|渲染 3D 晶胞结构| UI
-    UI <-->|双向 WebSocket JSON| Main
-    Main <--> WS
-    WS <--> Agent
-    
-    %% Agent 决策与工具路由
-    Agent <-->|System/User Prompt & 思考链| DeepSeek
-    Agent <-->|工具调度请求| Registry
-    
-    %% 工具具体执行
-    Registry -->|get_cif| CIF
-    Registry -->|retrieve_knowledge_base| KB
-    Registry -->|web_search| Serp
-    Registry -->|mp_search / mp_get_*| MP
-    
-    %% 晶体数据处理与渲染推送
-    Registry -->|原始晶体数据分析| Service
-    Service -->|Pymatgen & CrystalNN 晶胞计算| Registry
-    Registry -->|render_3d_structure| WS
-    WS -->|推送渲染指令 {"type": "render", "cif": "..."}| UI
-    UI -->|传递 CIF 内容| Viewer
-    
-    %% 样式绑定
-    class UI,Chat,Viewer client;
-    class Main,WS,Service,Agent,Registry server;
-    class CIF,KB storage;
-    class MP,Serp,DeepSeek external;
 
 ## License
 
 MIT License
+
+```mermaid
+flowchart TD
+    Start(["用户输入 Query"]) --> Receive["FastAPI 接收消息并初始化 Agent 上下文"]
+    Receive --> AgentLoop{"DeepSeek Agent 迭代循环"}
+    
+    %% Agent 内部循环
+    AgentLoop -->|"生成思考链 (Thinking Mode)"| Analyze["分析当前上下文，判断信息是否完整"]
+    Analyze --> Decision{"是否需要调用工具?"}
+    
+    %% 工具调用分支
+    Decision -->|"是 (Tool Call)"| ChooseTool["匹配工具库中的工具"]
+    
+    subgraph Tools ["工具箱 (tool_registry)"]
+        direction TB
+        T1["本地缓存读取: get_cif"]
+        T2["本地知识库检索: retrieve_knowledge_base"]
+        T3["MP材料库检索: mp_search_materials / mp_get_*"]
+        T4["联网搜索: web_search"]
+        T5["3D结构渲染指令: render_3d_structure"]
+    end
+    
+    ChooseTool --> Tools
+    Tools --> RunTool["执行后端工具代码"]
+    
+    %% 3D 渲染的旁路异步流程
+    T5 -.->|"发送 WebSocket 渲染事件"| WS_Send["发送 CIF 数据包到前端"]
+    WS_Send -.-> Render3D["3Dmol.js 渲染 3D 晶体"]
+    
+    RunTool -->|"获取工具执行结果"| UpdateContext["更新历史上下文 (Messages 列表)"]
+    UpdateContext --> AgentLoop
+    
+    %% 循环结束分支
+    Decision -->|"否"| StreamAnswer["流式输出最终文本回复"]
+    StreamAnswer --> RenderMD["前端渲染 Markdown + LaTeX 公式"]
+    RenderMD --> End(["单次交互结束"])
